@@ -1,0 +1,324 @@
+{% extends "header.html" %}
+{% block content %}
+		<!-- banner -->
+		<div class="banner_inner">
+                <div class="services-breadcrumb">
+                    <div class="inner_breadcrumb">
+    
+                        <ul class="short">
+                            <li>
+                                <a href="{% url 'frontend:index' %}">Home</a>
+                                <i>|</i>
+                            </li>
+                            <li>
+                                <a href="#">{{discount.category_name}}</a>
+                                <i>|</i>
+                            </li>
+                            <li>{{discount.product_name}}</li>
+                        </ul>
+                    </div>
+                </div>
+    
+            </div>
+            
+        </div>
+            <!--//banner -->
+            <!--/shop-->
+            <section class="banner-bottom-wthreelayouts py-lg-5 py-3">
+                <div class="container">
+                    <div class="inner-sec-shop pt-lg-4 pt-3">
+                        <div class="row">
+                                <div class="col-lg-4 single-right-left ">
+                                        <div class="grid images_3_of_2">
+                                            <div class="flexslider1">
+                        
+                                                <ul class="slides">
+                                                    <li data-thumb="http://{{discount.product_image}}">
+                                                        <div class="thumb-image"> <img src="http://{{discount.product_image}}" data-imagezoom="true" class="img-fluid" alt=" "> </div>
+                                                    </li>
+                                                </ul>
+                                                <div class="clearfix"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-8 single-right-left simpleCart_shelfItem">
+                                        <h3>{{discount.product_name}}<h3>
+                                        <p>
+                                            <span class="item_price">Giảm giá chỉ còn {{discount.product_price}} !</span>
+                                        </p>
+                                        <div>
+                                            <h3 style="color:red">Từ <del>{{discount.product_old_price}}</del></h3>
+                                        </div>
+                                        <br>
+                                        <br>
+                                        <div class="occasion-cart">
+                                                <div class="googles single-item singlepage">
+                                                        <form action="{{discount.product_link}}" method="post">
+                                                            <button type="submit" class="googles-cart pgoogles-cart">
+                                                                Go to website
+                                                            </button>
+                                                        </form>
+                                                    </div>
+                                        </div>
+                                    </div>
+                                    <div class="clearfix"> </div>      
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <center>
+                <p>
+                <div class="fb-like" data-href="{{current_url}}" data-layout="standard" data-action="like" data-size="large" data-show-faces="true" data-share="true"></div>
+                </p>
+                <hr>
+                <p>
+                <div class="fb-comments" data-href="{{current_url}}" data-numposts="5"></div>
+                </p>
+                </center>
+                    <div class="container-fluid">
+                        <!--/slide-->
+                        <div class="slider-img mid-sec">
+                            <!--//banner-sec-->
+                            <div class="mid-slider">
+                                <div class="owl-carousel owl-theme row">
+                                    <div class="item">
+                                        <div class="gd-box-info text-center">
+                                            <div class="product-men women_two bot-gd">
+                                                <div class="product-googles-info slide-img googles">
+                                                    <div class="men-pro-item">
+                                                        <div class="men-thumb-item">
+                                                            <img src="images/s5.jpg" class="img-fluid" alt="">
+                                                            <div class="men-cart-pro">
+                                                                <div class="inner-men-cart-pro">
+                                                                    <a href="single.html" class="link-product-add-cart">Quick View</a>
+                                                                </div>
+                                                            </div>
+                                                            <span class="product-new-top">New</span>
+                                                        </div>
+                                                        <div class="item-info-product">
+        
+                                                            <div class="info-product-price">
+                                                                <div class="grid_meta">
+                                                                    <div class="product_price">
+                                                                        <h4>
+                                                                            <a href="single.html">Fastrack Aviator </a>
+                                                                        </h4>
+                                                                        <div class="grid-price mt-2">
+                                                                            <span class="money ">$325.00</span>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div>
+                                                                        <h3>Sendo.vn</h3>
+                                                                    </div>
+                                                                    <div><h2 style="color:red">30% off!</h2></div>
+                                                                </div>
+                                                            </div>
+        
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="gd-box-info text-center">
+                                            <div class="product-men women_two bot-gd">
+                                                <div class="product-googles-info slide-img googles">
+                                                    <div class="men-pro-item">
+                                                        <div class="men-thumb-item">
+                                                            <img src="images/s6.jpg" class="img-fluid" alt="">
+                                                            <div class="men-cart-pro">
+                                                                <div class="inner-men-cart-pro">
+                                                                    <a href="single.html" class="link-product-add-cart">Quick View</a>
+                                                                </div>
+                                                            </div>
+                                                            <span class="product-new-top">New</span>
+                                                        </div>
+                                                        <div class="item-info-product">
+        
+                                                            <div class="info-product-price">
+                                                                <div class="grid_meta">
+                                                                    <div class="product_price">
+                                                                        <h4>
+                                                                            <a href="single.html">MARTIN Aviator </a>
+                                                                        </h4>
+                                                                        <div class="grid-price mt-2">
+                                                                            <span class="money ">$425.00</span>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div>
+                                                                        <h3>Sendo.vn</h3>
+                                                                    </div>
+                                                                    <div><h2 style="color:red">30% off!</h2></div>
+                                                                </div>
+                                                            </div>
+        
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="gd-box-info text-center">
+                                            <div class="product-men women_two bot-gd">
+                                                <div class="product-googles-info slide-img googles">
+                                                    <div class="men-pro-item">
+                                                        <div class="men-thumb-item">
+                                                            <img src="images/s7.jpg" class="img-fluid" alt="">
+                                                            <div class="men-cart-pro">
+                                                                <div class="inner-men-cart-pro">
+                                                                    <a href="single.html" class="link-product-add-cart">Quick View</a>
+                                                                </div>
+                                                            </div>
+                                                            <span class="product-new-top">New</span>
+                                                        </div>
+                                                        <div class="item-info-product">
+        
+                                                            <div class="info-product-price">
+                                                                <div class="grid_meta">
+                                                                    <div class="product_price">
+                                                                        <h4>
+                                                                            <a href="single.html">Royal Son Aviator </a>
+                                                                        </h4>
+                                                                        <div class="grid-price mt-2">
+                                                                            <span class="money ">$425.00</span>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div>
+                                                                        <h3>Sendo.vn</h3>
+                                                                    </div>
+                                                                    <div><h2 style="color:red">30% off!</h2></div>
+                                                                </div>
+                                                            </div>
+        
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="gd-box-info text-center">
+                                            <div class="product-men women_two bot-gd">
+                                                <div class="product-googles-info slide-img googles">
+                                                    <div class="men-pro-item">
+                                                        <div class="men-thumb-item">
+                                                            <img src="images/s8.jpg" class="img-fluid" alt="">
+                                                            <div class="men-cart-pro">
+                                                                <div class="inner-men-cart-pro">
+                                                                    <a href="single.html" class="link-product-add-cart">Quick View</a>
+                                                                </div>
+                                                            </div>
+                                                            <span class="product-new-top">New</span>
+                                                        </div>
+                                                        <div class="item-info-product">
+        
+                                                            <div class="info-product-price">
+                                                                <div class="grid_meta">
+                                                                    <div class="product_price">
+                                                                        <h4>
+                                                                            <a href="single.html">Irayz Butterfly </a>
+                                                                        </h4>
+                                                                        <div class="grid-price mt-2">
+                                                                            <span class="money ">$281.00</span>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div>
+                                                                        <h3>Sendo.vn</h3>
+                                                                    </div>
+                                                                    <div><h2 style="color:red">30% off!</h2></div>
+                                                                </div>
+                                                            </div>
+        
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="gd-box-info text-center">
+                                            <div class="product-men women_two bot-gd">
+                                                <div class="product-googles-info slide-img googles">
+                                                    <div class="men-pro-item">
+                                                        <div class="men-thumb-item">
+                                                            <img src="images/s9.jpg" class="img-fluid" alt="">
+                                                            <div class="men-cart-pro">
+                                                                <div class="inner-men-cart-pro">
+                                                                    <a href="single.html" class="link-product-add-cart">Quick View</a>
+                                                                </div>
+                                                            </div>
+                                                            <span class="product-new-top">New</span>
+                                                        </div>
+                                                        <div class="item-info-product">
+        
+                                                            <div class="info-product-price">
+                                                                <div class="grid_meta">
+                                                                    <div class="product_price">
+                                                                        <h4>
+                                                                            <a href="single.html">Jerry Rectangular </a>
+                                                                        </h4>
+                                                                        <div class="grid-price mt-2">
+                                                                            <span class="money ">$525.00</span>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div>
+                                                                        <h3>Sendo.vn</h3>
+                                                                    </div>
+                                                                    <div><h2 style="color:red">30% off!</h2></div>
+                                                                </div>
+                                                            </div>
+        
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="gd-box-info text-center">
+                                            <div class="product-men women_two bot-gd">
+                                                <div class="product-googles-info slide-img googles">
+                                                    <div class="men-pro-item">
+                                                        <div class="men-thumb-item">
+                                                            <img src="images/s10.jpg" class="img-fluid" alt="">
+                                                            <div class="men-cart-pro">
+                                                                <div class="inner-men-cart-pro">
+                                                                    <a href="single.html" class="link-product-add-cart">Quick View</a>
+                                                                </div>
+                                                            </div>
+                                                            <span class="product-new-top">New</span>
+                                                        </div>
+                                                        <div class="item-info-product">
+        
+                                                            <div class="info-product-price">
+                                                                <div class="grid_meta">
+                                                                    <div class="product_price">
+                                                                        <h4>
+                                                                            <a href="single.html">Herdy Wayfarer </a>
+                                                                        </h4>
+                                                                        <div class="grid-price mt-2">
+                                                                            <span class="money ">$325.00</span>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div>
+                                                                        <h3>Sendo.vn</h3>
+                                                                    </div>
+                                                                    <div><h2 style="color:red">30% off!</h2></div>
+                                                                </div>
+                                                            </div>
+        
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--//slider-->
+                    </div>
+            </section>
+            {% endblock %}

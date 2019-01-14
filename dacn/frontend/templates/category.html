@@ -1,0 +1,93 @@
+{% extends "header.html" %}
+{% load pagination_tags %}
+{% block content %}
+		<!-- banner -->
+		<div class="banner_inner">
+			<div class="services-breadcrumb">
+				<div class="inner_breadcrumb">
+
+					<ul class="short">
+						<li>
+							<a href="index.html">Home</a>
+							<i>|</i>
+                        </li>
+                        <li>{{category.name}}</li>
+					</ul>
+				</div>
+			</div>
+
+		</div>
+		<!--//banner -->
+		<!--/shop-->
+		<section class="banner-bottom-wthreelayouts py-lg-5 py-3">
+			<div class="container-fluid">
+				<div class="inner-sec-shop px-lg-4 px-3">
+					<h3 class="tittle-w3layouts my-lg-4 mt-3">New Arrivals for you </h3>
+					<div class="row">
+						<!--/product right-->
+						<div class="left-ads-display col-lg-12">
+							<div class="wrapper_top_shop">
+								<div class="row">
+										<div class="col-md-6 shop_left">
+												<img src="images/banner3.jpg" alt="">
+												<h6>40% off</h6>
+											</div>
+											<div class="col-md-6 shop_right">
+												<img src="images/banner4.jpg" alt="">
+												<h6>50% off</h6>
+											</div>
+						
+								</div>
+								<div class="row">
+                                    <div class="row">
+                                        {% autopaginate discount 12 %}
+                                        {% for discount in discount %}
+									<!-- /womens -->
+									<div class="col-md-3 product-men women_two shop-gd">
+										<div class="product-googles-info googles">
+											<div class="men-pro-item">
+												<div class="men-thumb-item">
+													<img src="http://{{discount.product_image}}" class="img-fluid" alt="">
+													<div class="men-cart-pro">
+														<div class="inner-men-cart-pro">
+															<a href="{% url 'frontend:single' discount.id %}" class="link-product-add-cart">Quick View</a>
+														</div>
+													</div>
+													<span class="product-new-top">New</span>
+												</div>
+												<div class="item-info-product">
+													<div class="info-product-price">
+														<div class="grid_meta">
+															<div class="product_price">
+																<h4>
+																	<a href="{% url 'frontend:single' discount.id %}">{{discount.product_name}}</a>
+																</h4>
+																<div class="grid-price mt-2">
+                                                                        Giá cũ: <span class="money " style="text-decoration: line-through;">{{discount.product_old_price}}</span>
+																</div>
+															</div>
+														</div>
+														<div>
+															<h3>{{discount.product_site}}</h3>
+														</div>
+														<div><h2 style="color:red; font-size:24px;">Chỉ còn {{discount.product_price}}!</h2></div>
+													</div>
+													<div class="clearfix"></div>
+												</div>
+											</div>
+										</div>
+                                    </div>
+                                    {% endfor %}
+                                    </div>
+                                    <div class="row" style="padding-left: 40px;padding-top:20px;">
+                                    {% paginate %}
+                                    </div>
+								</div>
+							</div>
+						</div>
+						<!--//product right-->
+					</div>
+				</div>
+			</div>
+        </section>
+    {% endblock %}
